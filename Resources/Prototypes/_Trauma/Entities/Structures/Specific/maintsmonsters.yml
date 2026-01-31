@@ -1,0 +1,40 @@
+- type: entity
+  id: SpiderWebMycelium
+  parent: SpiderWebBase
+  name: mycelial mat
+  description: It feels alive yet smells like it's rotting.
+  components:
+  - type: Sprite
+    color: "#2b0700"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Edible
+    delay: 5
+  - type: Tag
+    tags:
+    - Carpet
+  - type: Flammable
+    fireSpread: true
+    damage:
+     types:
+       Heat: 1.5
+  - type: DamageContacts
+    damage:
+      types:
+        Slash: 1.5
+        Piercing: 1.5
+    ignoreWhitelist:
+      tags:
+      - Flesh
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Spores
+          Quantity: 1

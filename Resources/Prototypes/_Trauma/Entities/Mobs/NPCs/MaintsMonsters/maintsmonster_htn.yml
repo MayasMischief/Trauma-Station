@@ -1,0 +1,31 @@
+- type: htnCompound
+  id: MaintsMonsterCompound
+  branches:
+  - tasks:
+    - !type:HTNCompoundTask
+      task: MeleeCombatCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: XenoSlimeFoodCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: EscapeCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: IdleCompound
+
+- type: htnCompound
+  id: MaintsMonsterRangedCompound
+  branches:
+  - tasks:
+    - !type:HTNCompoundTask
+      task: GunCombatCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: XenoSlimeFoodCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: EscapeCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: IdleCompound

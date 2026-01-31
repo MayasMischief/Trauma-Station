@@ -1,0 +1,8 @@
+- type: entity
+  id: ChestFungal
+  name: "fungal chest"
+  parent: [PartSlime, BaseChest] # TODO: PartFungal
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/Slime/parts.rsi
+      state: "chest_m"

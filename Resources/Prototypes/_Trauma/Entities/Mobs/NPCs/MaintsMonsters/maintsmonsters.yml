@@ -1,0 +1,224 @@
+- type: entity
+  abstract: true
+  parent: SimpleMobBase
+  id: BaseMaintsMonster
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 30
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      100: Dead
+  - type: Tag
+    tags:
+    - CannotSuicide
+  - type: Hunger
+    startingHunger: 40
+    thresholds:
+      Overfed: 150
+      Okay: 75
+      Peckish: 25
+      Starving: 10
+      Dead: 0
+    hungerThresholdDecayModifiers:
+      Okay: 1.5
+      Peckish: 0.4
+      Starving: 0.2
+      Dead: 0.1
+    baseDecayRate: 0.5
+    starvingSlowdownModifier: 0
+  - type: NpcFactionMember
+    factions:
+    - Xeno
+  - type: HTN
+    rootTask:
+      task: MaintsMonsterCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+  - type: Prying
+    pryPowered: true
+  - type: ComplexInteraction
+
+- type: entity
+  abstract: true
+  parent: BaseMaintsMonster
+  id: BaseMaintsMonsterMycelial
+  components:
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: MycelialBlood
+        Quantity: 50
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          0.5
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -0.25
+  - type: TriggerOnMobstateChange
+    mobState:
+      - Dead
+  - type: SmokeOnTrigger
+    duration: 5
+    spreadAmount: 5
+    solution:
+      reagents:
+        - ReagentId: Spores
+          Quantity: 5
+
+- type: entity
+  name: MaintsMonster mushroach
+  parent: BaseMaintsMonsterMycelial
+  id: MobMaintsMushroach
+  description:  A mycelial infestation upon a giant cockroach husk. Reportedly tastes like meat, but it's probably not a good idea to try it.
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Mobs/Animals/cockroach.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cockroach
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Critical
+      60: Dead
+
+- type: entity
+  name: mushroach
+  parent: SimpleMobBase
+  id: MobMushroach
+  description: A mycelial infestation upon a giant cockroach husk. Reportedly tastes like meat, but it's probably not a good idea to try it.
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Mobs/Animals/cockroach.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cockroach
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 30
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Critical
+      60: Dead
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - CannotSuicide
+    - VimPilot
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: cockroach
+      Critical:
+        Base: cockroach_dead
+      Dead:
+        Base: cockroach_dead
+  - type: LanguageKnowledge
+    speaks: [Hissing]
+    understands: [Hissing]
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: MycelialBlood
+        Quantity: 100
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          0.5
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -0.25
+  - type: MobPrice
+    price: 10 # This shit useless to others.
+  - type: TriggerOnMobstateChange
+    mobState:
+      - Critical
+  - type: SmokeOnTrigger
+    duration: 5
+    spreadAmount: 20
+    solution:
+      reagents:
+        - ReagentId: Spores
+          Quantity: 5
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 2
+        Slashing: 2
+        Caustic: 2
+        Structural: 1
+  - type: Hunger
+    startingHunger: 40
+    thresholds:
+      Overfed: 150
+      Okay: 75
+      Peckish: 25
+      Starving: 10
+      Dead: 0
+    hungerThresholdDecayModifiers:
+      Okay: 1.5
+      Peckish: 0.4
+      Starving: 0.2
+      Dead: 0.1
+    baseDecayRate: 0.5
+    starvingSlowdownModifier: 0
+  - type: NpcFactionMember
+    factions:
+    - Xeno
+  - type: HTN
+    rootTask:
+      task: MaintsMonsterCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+  - type: Prying
+    pryPowered: true
+  - type: ComplexInteraction

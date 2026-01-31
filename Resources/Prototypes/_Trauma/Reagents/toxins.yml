@@ -82,3 +82,78 @@
       - !type:Emote
         emote: Scream
         probability: 0.2
+
+- type: reagent
+  id: Spores
+  name: reagent-name-spores
+  group: Toxins
+  desc: reagent-desc-spores
+  physicalDesc: reagent-physical-desc-starry
+  color: "#6fb7ab"
+  worksOnTheDead: true
+  metabolisms: # TODO: Make infest certain invertibrates, and turn into shitty romerol with a fungus that virology needs to cure but isn't actually hard to deal with.
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.4
+            Cellular: 0.2 # Give med more work
+      - !type:Emote
+        emote: Scream
+        probability: 0.05
+        conditions:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        type: Add
+        time: 1
+      - !type:Drunk
+        boozePower: 1
+
+- type: reagent
+  id: MycelialBlood
+  name: reagent-name-mycelialblood
+  group: Biological
+  desc: reagent-desc-mycelialblood
+  physicalDesc: reagent-physical-desc-fibrous
+  flavor: bitter
+  color: "#2b0700" # Intentional to look like Zombie Blood. Suffer.
+  worksOnTheDead: true
+  tileReactions:
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 2 # Burns hot to let flamethrowers deal with them better
+  - !type:CreateEntityTileReaction
+    entity: SpiderWebMycelium
+    maxOnTileWhitelist:
+      tags: [ Carpet ] # Can't mycelium carpets because uh...
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: -0.5
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.5
+            Blunt: -0.5
+            Slash: -0.5
+            Piercing: -0.5
+      - !type:Vomit
+        probability: 0.25
+      - !type:Flammable
+        multiplier: 0.4
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        type: Add
+        time: 4
+      - !type:Drunk
+        boozePower: 1
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:Flammable
+        multiplier: 0.4
