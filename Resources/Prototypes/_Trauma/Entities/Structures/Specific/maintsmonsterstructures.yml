@@ -27,8 +27,9 @@
   - type: DamageContacts
     damage:
       types:
-        Slash: 1.5
-        Piercing: 1.5
+        Slash: 0.5
+        Piercing: 0.5
+        Blunt: 0.5
     ignoreWhitelist:
       tags:
       - Flesh

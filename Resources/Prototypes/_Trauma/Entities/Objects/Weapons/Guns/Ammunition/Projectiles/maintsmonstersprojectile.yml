@@ -1,0 +1,26 @@
+- type: entity
+  id: BulletGrenadeSpore
+  name: spore grenade
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: grenade
+  - type: EmitSoundOnTrigger
+    keysIn:
+    - timer
+    sound: /Audio/Items/smoke_grenade_smoke.ogg
+    positional: true
+  - type: SmokeOnTrigger
+    duration: 5
+    spreadAmount: 5
+    solution:
+      reagents:
+        - ReagentId: Spores
+          Quantity: 5
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: DeleteOnTrigger
+  - type: SmartLinkBlacklist  # Goobstation

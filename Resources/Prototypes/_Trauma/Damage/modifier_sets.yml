@@ -25,3 +25,17 @@
     Piercing: 15
     Heat: 15
     Structural: 15
+
+- type: damageModifierSet
+  id: Fungal
+  coefficients:
+    Heat: 1.5
+    Cold: 1.5
+    Caustic: 1.5 # Encourage acid because funny, even though they'll likely use it too.
+    Shock: 0
+    Radiation: 0
+    Poison: -1.0 # Don't poison them.
+    Cellular: -1.0 # Don't ling them.
+    Holy: 0.5 # Just because they take holy doesn't mean they're weak to it.
+  ignoreArmorPierceFlags: All
+

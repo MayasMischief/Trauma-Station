@@ -141,6 +141,7 @@
             Blunt: -0.5
             Slash: -0.5
             Piercing: -0.5
+        IgnoreResistances: false
       - !type:Vomit
         probability: 0.25
       - !type:Flammable

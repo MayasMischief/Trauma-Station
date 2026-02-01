@@ -80,6 +80,14 @@
   - type: TriggerOnMobstateChange
     mobState:
       - Dead
+  - type: MobPrice
+    price: 10 # This shit useless to others.
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Fungal
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: Explosion
   - type: SmokeOnTrigger
     duration: 5
     spreadAmount: 5
@@ -87,12 +95,32 @@
       reagents:
         - ReagentId: Spores
           Quantity: 5
+  - type: WeakToHoly # Not because they're weak to it, but so they can take holy damage.
+    alwaysTakeHoly: true
 
 - type: entity
-  name: MaintsMonster mushroach
+  abstract: true
   parent: BaseMaintsMonsterMycelial
-  id: MobMaintsMushroach
-  description:  A mycelial infestation upon a giant cockroach husk. Reportedly tastes like meat, but it's probably not a good idea to try it.
+  id: BaseMaintsMonsterMycelialRanged
+  components:
+  - type: HTN
+    rootTask:
+      task: MaintsMonsterRangedCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+
+- type: entity
+  name: Sproach
+  parent: BaseMaintsMonsterMycelial
+  id: MobMaintsSproach
+  description: A fungal infestation upon a giant cockroach husk. Reportedly tastes like meat, but it's probably not a good idea to try it.
   components:
   - type: Sprite
     drawdepth: SmallMobs
@@ -106,8 +134,56 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      30: Critical
-      60: Dead
+      40: Critical
+      50: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 2
+        Slash: 2
+        Blunt: 2
+        Structural: 1
+
+- type: entity
+  name: Sportar Launcher
+  parent: BaseMaintsMonsterMycelialRanged
+  id: MobMaintsSportarLauncher
+  description: The fungal infestation on this crab seems to have mutated it into a sort of organic mortar launcher.
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Mobs/Animals/cockroach.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cockroach
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      50: Dead
+  - type: Gun
+    fireRate: 1
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+  - type: Battery
+    maxCharge: 100
+    startingCharge: 100
+  - type: BatteryAmmoProvider
+    proto: BulletGrenadeSpore
+    fireCost: 30
+  - type: BatterySelfRecharger
+    autoRechargeRate: 2.5
+  - type: MeleeWeapon
+    damage:
+      types:
+        Poison: 2 # YES, DIRECT POISON DAMAGE.
+        Structural: 1
 
 - type: entity
   name: mushroach
