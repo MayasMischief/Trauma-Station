@@ -2145,3 +2145,168 @@ Entries:
   id: 261
   time: '2026-01-30T17:58:59.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/563
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Insurgents can no longer be plasmamen.
+  - type: Fix
+    message: Fixed job icons from job malfunction event.
+  - type: Fix
+    message: Fixed not being able to make nailgun magazines specifically.
+  - type: Fix
+    message: Fixed station radio sounding weird.
+  id: 262
+  time: '2026-01-31T13:32:08.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/581
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed the AI being able to knock on shutters and blast doors.
+  id: 263
+  time: '2026-01-31T13:48:34.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/583
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed not being able to move after using a lavaland jaunter.
+  id: 264
+  time: '2026-01-31T14:25:21.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/585
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed splashing liquids on people being silent.
+  id: 265
+  time: '2026-01-31T15:08:51.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/587
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed being able to butcher lings and absorbed bodies.
+  id: 266
+  time: '2026-01-31T16:07:00.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/588
+- author: MayasMischief
+  changes:
+  - type: Tweak
+    message: Screwdrivers now deal damage when thrown
+  - type: Remove
+    message: Removed BSO
+  id: 267
+  time: '2026-01-31T17:27:27.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/580
+- author: Aviu
+  changes:
+  - type: Add
+    message: Improved audio muffle, it should be more smooth now.
+  id: 268
+  time: '2026-02-01T11:13:40.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/598
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed abductors console not working.
+  id: 269
+  time: '2026-02-01T11:53:25.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/600
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed lollypops being eaten instantly.
+  id: 270
+  time: '2026-02-01T13:06:59.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/601
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Predicted space dragon's fireball action.
+  id: 271
+  time: '2026-02-01T14:29:38.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/602
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Mice no longer have a groin part so you can't cheese the egg sack.
+  id: 272
+  time: '2026-02-01T17:21:13.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/605
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed deltarune reference not working on lavaland and working on station.
+  id: 273
+  time: '2026-02-01T17:28:19.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/606
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Toy facehuggers no longer inject nocturine.
+  id: 274
+  time: '2026-02-01T21:42:03.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/609
+- author: TurboTrackerss14
+  changes:
+  - type: Fix
+    message: >-
+      Capoeria sweepkick now properly applies its grabspeed increase, instead of
+      reducing it.
+  id: 275
+  time: '2026-02-01T21:59:25.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/607
+- author: Aviu
+  changes:
+  - type: Add
+    message: 'New mime exclusive traitor item: guide to advanced mimery.'
+  id: 276
+  time: '2026-02-02T07:07:12.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/473
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Fixed smart equip trying to take mags out of guns instead of equipping
+      them.
+  id: 277
+  time: '2026-02-02T08:11:02.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/612
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed some holy fire shitcode that made you stay on fire forever.
+  - type: Tweak
+    message: Blood can now extinguish fires, albeit worse than water.
+  - type: Tweak
+    message: Holy water holy firestacks when drank decreased from 10 to 3 per unit.
+  id: 278
+  time: '2026-02-02T11:29:29.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/618
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed agent and revolutionary IDs only having maints access.
+  id: 279
+  time: '2026-02-02T11:39:34.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/621
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Hid crew cassette players when equipped, its sprite was too distracting.
+  id: 280
+  time: '2026-02-02T14:44:37.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/626
+- author: NoElkaTheGod
+  changes:
+  - type: Tweak
+    message: You can now chose other species' language in character editor
+  id: 281
+  time: '2026-02-02T16:00:56.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/625
+- author: NoElkaTheGod
+  changes:
+  - type: Fix
+    message: Cosmic cultists can see their own monument again.
+  - type: Fix
+    message: Heretics can see reality shifts again.
+  id: 282
+  time: '2026-02-02T16:21:26.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/628
