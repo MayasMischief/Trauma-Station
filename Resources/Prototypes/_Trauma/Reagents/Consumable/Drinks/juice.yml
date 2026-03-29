@@ -28,3 +28,102 @@
         intensityPerUnit: 0.1
         intensitySlope: 1
         maxTotalIntensity: 0.1
+
+- type: reagent
+  parent: BaseJuice
+  id: JuiceGlitchLemon
+  name: reagent-name-juice-glitchlemon
+  desc: reagent-desc-juice-glitchlemon
+  physicalDesc: reagent-physical-desc-citric
+  flavor: sour
+  color: "#000000" # i cant be bothered yeah it just looks the same
+  recognizable: true
+  tileReactions:
+  - !type:CreateEntityTileReaction
+    entity: GlitchFire
+    maxOnTileWhitelist:
+      tags: [ TraumaFire ]
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 5
+  worksOnTheDead: true
+  metabolisms:
+    Bloodstream:
+      metabolismRate: 0.1
+      effects:
+        - !type:Explosion
+          explosionType: Default
+          maxIntensity: 0.1
+          intensityPerUnit: 0.1
+          intensitySlope: 1
+          maxTotalIntensity: 0.1
+          probability: 0.1
+        - !type:Explosion
+          explosionType: DemolitionCharge
+          maxIntensity: 0.1
+          intensityPerUnit: 0.1
+          intensitySlope: 1
+          maxTotalIntensity: 0.1
+          probability: 0.1
+        - !type:Explosion
+          explosionType: Radioactive
+          maxIntensity: 0.1
+          intensityPerUnit: 0.1
+          intensitySlope: 1
+          maxTotalIntensity: 0.1
+          probability: 0.1
+        - !type:Explosion
+          explosionType: Cryo
+          maxIntensity: 0.1
+          intensityPerUnit: 0.1
+          intensitySlope: 1
+          maxTotalIntensity: 0.1
+          probability: 0.1
+        - !type:Explosion
+          explosionType: Supermatter # womp womp
+          maxIntensity: 0.1
+          intensityPerUnit: 0.1
+          intensitySlope: 1
+          maxTotalIntensity: 0.1
+          probability: 0.1
+        - !type:Explosion
+          explosionType: Thermobaric
+          maxIntensity: 0.1
+          intensityPerUnit: 0.1
+          intensitySlope: 1
+          maxTotalIntensity: 0.1
+          probability: 0.1
+        - !type:GenericStatusEffect
+          probability: 0.25
+          key: Centered
+          time: 10
+          component: TileMovement
+        - !type:HealthChange
+          probability: 0.25 # 25% change for omnizine healing
+          damage:
+            types:
+              Heat: -3
+            Shock: -3
+            Cold: -3
+            Caustic: -3
+            Poison: -3
+            Radiation: -3
+            Asphyxiation: -3
+            Bloodloss: -3
+            Blunt: -3
+            Slash: -3
+            Piercing: -3
+        - !type:HealthChange
+          probability: 0.25 # 25% change for omnizine hurting
+          damage:
+            types:
+              Heat: 3
+            Shock: 3
+            Cold: 3
+            Caustic: 3
+            Poison: 3
+            Radiation: 3
+            Asphyxiation: 3
+            Bloodloss: 3
+            Blunt: 3
+            Slash: 3
+            Piercing: 3

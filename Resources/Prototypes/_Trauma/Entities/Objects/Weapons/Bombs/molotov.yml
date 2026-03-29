@@ -1,0 +1,26 @@
+- type: entity
+  parent: MolotovFire
+  id: GlitchFire
+  suffix: glitch
+  components:
+  - type: TimedDespawn
+    lifetime: 60 # lol
+  - type: IgnitionSource
+    temperature: -400 # lol
+    ignited: true
+  - type: TileEntityEffect
+    effects:
+    - !type:Flammable
+      multiplier: 2
+      multiplierOnExisting: 1
+    - !type:Ignite
+  - type: PointLight
+    radius: 5
+    energy: 10
+    color: "#ff00ff"
+  - type: Sprite
+    sprite: _Trauma/Effects/floorfire.rsi
+    layers:
+    - state: glitchfire
+  - type: RadiationSource # suffer :)
+    intensity: 0.1

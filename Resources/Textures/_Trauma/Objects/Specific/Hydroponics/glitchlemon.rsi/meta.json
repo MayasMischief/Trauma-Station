@@ -1,0 +1,58 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "All growth stages, harvest, and produce created by Chaoticaa (GitHub), inhands by mubururu_ (github), icon created by Chaoticaa (GitHub), inhands modified by Prole0 (GitHub), all modified again by MayasMischief, with Flareguy having made depricated.png which is used as the dead sprite",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "dead"
+        },
+        {
+            "name": "harvest",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "seed",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "stage-1",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "stage-2",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "stage-3",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "stage-4",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "stage-5",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "stage-6",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625]]
+        },
+        {
+            "name": "produce-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "produce-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "produce",
+            "delays": [[0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625]]
+        }
+    ]
+}

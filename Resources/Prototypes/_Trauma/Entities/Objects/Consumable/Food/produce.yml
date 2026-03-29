@@ -68,3 +68,78 @@
     butcheringType: Knife
     spawned:
     - id: LemonGrenade
+
+- type: entity
+  parent: FoodProduceBase
+  id: FoodGlitchLemon
+  name: ???
+  description: You probably shouldn't be using this
+  suffix: Food
+  components:
+  # Artifact stuff start
+  - type: XenoArtifact
+    effectsTable: !type:NestedSelector
+      tableId: XenoArtifactEffectsLemonTable
+  - type: RadiationReceiver
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+      Acidic: [Touch]
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 0.3
+    baseSprintSpeed: 0.5
+  - type: UseDelay
+  - type: Damageable
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+      enum.IntercomUiKey.Key:
+        type: IntercomBoundUserInterface
+  # Artifact stuff end
+  - type: SwapTeleportOnThrow
+  - type: FlavorProfile
+    flavors:
+    - glitchlemon
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: JuiceGlitchLemon
+          Quantity: 5
+        - ReagentId: Singulo
+          Quantity: 5
+  - type: Sprite
+    sprite: _Trauma/Objects/Specific/Hydroponics/glitchlemon.rsi
+  - type: Item
+    heldPrefix: produce
+  - type: Produce
+    seedId: GlitchLemon
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceGlitchLemon
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+  - type: RandomTimerTrigger
+    min: 5
+    max: 300
+  - type: TriggerOnSpawn
+  - type: SpawnOnTrigger
+    keysIn:
+    - timer
+    proto: GlitchFire
+  - type: TimerTrigger
+    delay: 60
+    examinable: false
+  - type: DeleteOnTrigger
+    keysIn:
+    - timer

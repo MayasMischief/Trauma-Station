@@ -11,6 +11,18 @@
 
 - type: entity
   parent: SeedBase
+  id: GlitchLemonSeeds
+  name: packet of ??? seeds
+  description: Not to be confused with the drink.
+  components:
+  - type: Seed
+    seedId: GlitchLemon
+  - type: Sprite
+    sprite: _Trauma/Objects/Specific/Hydroponics/glitchlemon.rsi
+
+
+- type: entity
+  parent: SeedBase
   id: CocaSeeds
   name: packet of coca seeds
   components:

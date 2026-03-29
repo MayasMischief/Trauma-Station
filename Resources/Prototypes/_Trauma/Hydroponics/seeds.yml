@@ -31,6 +31,36 @@
       PotencyDivisor: 100
 
 - type: seed
+  id: GlitchLemon
+  name: seeds-glitchlemon-name
+  noun: seeds-noun-seeds
+  displayName: seeds-glitchlemon-display-name
+  plantRsi: _Trauma/Objects/Specific/Hydroponics/glitchlemon.rsi
+  packetPrototype: GlitchLemonSeeds
+  productPrototypes:
+  - FoodGlitchLemon
+  harvestRepeat: Repeat
+  lifespan: 80 # lol
+  maturation: 6
+  production: 6
+  yield: 8
+  potency: 50 # lmao
+  idealLight: 8
+  chemicals:
+    WeldingFuel:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Napalm:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+    ChlorineTrifluoride:
+      Min: 1
+      Max: 1
+      PotencyDivisor: 100
+
+- type: seed
   id: CocaPlant
   name: seeds-cocaplant-name
   noun: seeds-noun-seeds
