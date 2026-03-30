@@ -5801,3 +5801,58 @@ Entries:
   id: 682
   time: '2026-03-29T19:02:01.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1691
+- author: MayasMischief and asardonicsailor
+  changes:
+  - type: Add
+    message: >-
+      Added a new Chaplain Nullrod, Faith. You can get it by applying silver to
+      a convert altar.
+  id: 683
+  time: '2026-03-29T19:52:50.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1642
+- author: JohnJJohn
+  changes:
+  - type: Tweak
+    message: End round credits now has the stations name in it
+  id: 684
+  time: '2026-03-29T23:25:42.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1700
+- author: RatherUncreativeName
+  changes:
+  - type: Add
+    message: Added raiders
+  id: 685
+  time: '2026-03-30T08:52:35.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1695
+- author: NoElkaTheGod
+  changes:
+  - type: Tweak
+    message: New sprites for railings.
+  id: 686
+  time: '2026-03-30T09:14:25.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1708
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed not being able to make skull candles.
+  id: 687
+  time: '2026-03-30T10:14:28.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1710
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed cancer mice getting cancer
+  id: 688
+  time: '2026-03-30T10:36:52.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1711
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: >-
+      You can no longer take items out of bags that you aren't wearing or
+      holding, or some other more niche interactions where you are not in the
+      same container as another thing, like buckling someone while you are
+      inside a locker.
+  id: 689
+  time: '2026-03-30T12:56:05.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1714

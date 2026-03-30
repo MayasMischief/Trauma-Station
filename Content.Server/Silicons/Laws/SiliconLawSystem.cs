@@ -41,7 +41,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
 {
     // <Trauma>
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly IonStormSystem _ionStorm = default!;
+    [Dependency] private readonly IonLawSystem _ionLaw = default!;
     [Dependency] private readonly ResearchSystem _research = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
     // </Trauma>
@@ -452,7 +452,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         laws.Laws.RemoveAt(_random.Next(laws.Laws.Count));
 
         // generate a new law...
-        var newLaw = _ionStorm.GenerateLaw();
+        var newLaw = _ionLaw.GetIonLaw();
 
         // see if the law we add will replace a random existing law or be a new glitched order one
         if (laws.Laws.Count > 0)
