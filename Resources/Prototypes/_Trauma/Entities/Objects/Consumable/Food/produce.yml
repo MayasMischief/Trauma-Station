@@ -73,8 +73,8 @@
   parent: FoodProduceBase
   id: FoodGlitchLemon
   name: ???
-  description: You probably shouldn't be using this
-  suffix: Food
+  description: You probably shouldn't be using this...
+  suffix: Glitch Lemon
   components:
   # Artifact stuff start
   - type: XenoArtifact
@@ -102,19 +102,17 @@
       enum.IntercomUiKey.Key:
         type: IntercomBoundUserInterface
   # Artifact stuff end
-  - type: SwapTeleportOnThrow
+  - type: SwapTeleportOnThrow # go on, be unoriginal with it... or do cool shit
   - type: FlavorProfile
     flavors:
     - glitchlemon
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 1 # suffer, this is a failstate
         reagents:
         - ReagentId: JuiceGlitchLemon
-          Quantity: 5
-        - ReagentId: Singulo
-          Quantity: 5
+          Quantity: 1
   - type: Sprite
     sprite: _Trauma/Objects/Specific/Hydroponics/glitchlemon.rsi
   - type: Item
@@ -125,7 +123,7 @@
     juiceSolution:
       reagents:
       - ReagentId: JuiceGlitchLemon
-        Quantity: 10
+        Quantity: 1 # SUFFER. THIS IS A FAILSTATE. I mean I guess the reagent is kinda cool
   - type: Tag
     tags:
     - Fruit

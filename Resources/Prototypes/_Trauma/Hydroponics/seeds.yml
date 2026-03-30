@@ -9,6 +9,7 @@
   - FoodLemonade
   mutationPrototypes:
   - lime # mutated backwards idiot
+  - GlitchLemon # arguably worse
   harvestRepeat: Repeat
   lifespan: 55
   maturation: 6
@@ -47,15 +48,7 @@
   potency: 50 # lmao
   idealLight: 8
   chemicals:
-    WeldingFuel:
-      Min: 1
-      Max: 5
-      PotencyDivisor: 20
-    Napalm:
-      Min: 1
-      Max: 4
-      PotencyDivisor: 25
-    ChlorineTrifluoride:
+    JuiceGlitchLemon:
       Min: 1
       Max: 1
       PotencyDivisor: 100

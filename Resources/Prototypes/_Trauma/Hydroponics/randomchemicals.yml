@@ -1,0 +1,19 @@
+- type: weightedRandomFillSolution
+  id: GlitchRandomFillSolution
+  fills:
+  - quantity: 1.0
+    weight: 19
+    reagents:
+    - JuiceLemonade
+    - Napalm
+    - Bananadine
+    - Omnizine
+    - Fentanyl
+    - Desoxyephedrine
+    - Burnite
+    - Cognizine
+    - JuiceThatMakesYouWeh
+  - quantity: 1.0
+    weight: 1
+    reagents:
+    - JuiceGlitchLemon

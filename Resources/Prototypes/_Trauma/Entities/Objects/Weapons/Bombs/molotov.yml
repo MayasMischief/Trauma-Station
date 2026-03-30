@@ -11,8 +11,8 @@
   - type: TileEntityEffect
     effects:
     - !type:Flammable
-      multiplier: 2
-      multiplierOnExisting: 1
+      multiplier: 2 # nerfed slightly because it lasts for so much more time
+      multiplierOnExisting: 0.5
     - !type:Ignite
   - type: PointLight
     radius: 5
@@ -22,5 +22,3 @@
     sprite: _Trauma/Effects/floorfire.rsi
     layers:
     - state: glitchfire
-  - type: RadiationSource # suffer :)
-    intensity: 0.1
