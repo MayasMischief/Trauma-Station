@@ -1,0 +1,18 @@
+- type: entity
+  parent: BaseMob
+  id: BaseBoulder
+  name: DAMADAFAKIN BaseBoulder
+  description: bo'om text
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+  - type: Sprite
+    sprite: _Trauma/Objects/Specific/boulder.rsi
+    state: icon
+  - type: PushedByDamage
+
+- type: entity
+  parent: BaseBallBat
+  id: BaseBoulderBat
+  name: DAMADAFAKIN BaseBoulderBat
+  description: bo'om text
