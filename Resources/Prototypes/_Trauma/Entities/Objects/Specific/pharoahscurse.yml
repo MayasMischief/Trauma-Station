@@ -4,6 +4,9 @@
   name: DAMADAFAKIN BaseBoulder
   description: bo'om text
   components:
+  - type: WeatherImmune # ITS A FUCKING ROCK
+  - type: MovementIgnoreGravity
+    weightless: true
   - type: Damageable
     damageContainer: StructuralInorganic
   - type: Sprite
